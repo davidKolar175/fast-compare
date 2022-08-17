@@ -1,2 +1,5 @@
-# fast-compare
-VSCode extension for faster comparisonof two files.
+
+
+# fastcompare README
+
+This is something incedible!
