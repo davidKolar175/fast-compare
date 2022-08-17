@@ -1,8 +1,8 @@
 {
   "name": "fastcompare",
   "displayName": "FastCompare",
-  "description": "Adds button for fast comparing of files.",
-  "version": "0.0.1",
+  "description": "Fast way of simple comparsion between two files.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -10,28 +10,28 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:fastcompare.helloWorld"
+    "onCommand:fastcompare.fastcompare"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "fastcompare.helloWorld",
+        "command": "fastcompare.fastcompare",
         "title": "Compare with Active File"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "fastcompare.helloWorld",
+          "command": "fastcompare.fastcompare",
           "when": "false"
         }
       ],
       "editor/title/context": [
         {
           "when": "true",
-          "alt": "fastcompare.helloWorld",
-          "command": "fastcompare.helloWorld",
+          "alt": "fastcompare.fastcompare",
+          "command": "fastcompare.fastcompare",
           "group": "1_diff"
         }
       ]
