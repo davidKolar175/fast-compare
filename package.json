@@ -1,8 +1,14 @@
 {
   "name": "fastcompare",
-  "displayName": "FastCompare",
-  "description": "Fast way of simple comparsion between two files.",
+  "displayName": "Fast Compare",
+  "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title.",
+  "repository": {
+    "url": "https://github.com/davidKolar175/fast-compare"
+  },
   "version": "1.0.0",
+  "author": {
+    "name": "David Kolář"
+  },
   "engines": {
     "vscode": "^1.70.0"
   },
