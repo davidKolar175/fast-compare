@@ -4,7 +4,7 @@ Enables fast way of comparing two files via Context Menu Action on Text Editor T
 
 *************************************
 
-![Exhebition](src/img/Animation.gif)
+![Exhibition](src/img/Animation.gif)
 
 ## Release Notes
 
@@ -19,3 +19,7 @@ Extension now supports in-memory files (not saved).
 ### 1.0.2
 
 Extension now has an icon!
+
+### 1.0.3
+
+Minor fixes.
