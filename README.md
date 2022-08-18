@@ -15,3 +15,7 @@ Initial release of Fast Compare.
 ### 1.0.1
 
 Extension now supports in-memory files (not saved).
+
+### 1.0.2
+
+Extension now has an icon!

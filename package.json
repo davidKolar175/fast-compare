@@ -1,11 +1,12 @@
 {
   "name": "fastcompare",
   "displayName": "Fast Compare",
+  "icon": "src/img/icon.png",
   "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title.",
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "David Kolář"
   },
