@@ -9,6 +9,7 @@
   "author": {
     "name": "David Kolář"
   },
+  "publisher": "DavidKol",
   "engines": {
     "vscode": "^1.70.0"
   },
