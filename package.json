@@ -5,7 +5,7 @@
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "David Kolář"
   },
@@ -37,7 +37,6 @@
       "editor/title/context": [
         {
           "when": "true",
-          "alt": "fastcompare.fastcompare",
           "command": "fastcompare.fastcompare",
           "group": "1_diff"
         }

@@ -1,23 +1,24 @@
 import * as vscode from 'vscode';
-import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerCommand('fastcompare.fastcompare', (commandContext) => {
-        const leftFilePath = commandContext._fsPath ?? "";
-        const rightFilePath = vscode.window.activeTextEditor?.document?.fileName ?? "";
 
         if (!vscode.window.activeTextEditor) {
-            vscode.window.showErrorMessage("Active tab is not a text editor!");
+            vscode.window.showErrorMessage("Active tab is not a Text Editor!");
             return;
         }
 
-        if (!fs.existsSync(leftFilePath) || !fs.existsSync(rightFilePath)) {
-            vscode.window.showErrorMessage("Could not compare selection!");
+        if (commandContext.scheme !== "file" && commandContext.scheme !== "untitled" ) {
+            vscode.window.showErrorMessage("Tab to compare is not a Text Editor!");
             return;
         }
 
-        vscode.commands.executeCommand("vscode.diff", vscode.Uri.file(leftFilePath), vscode.Uri.file(rightFilePath));
+        vscode.commands.executeCommand(
+            "vscode.diff",
+            vscode.Uri.from({ scheme: commandContext.scheme, path: commandContext.path }),
+            vscode.window.activeTextEditor.document.uri
+        );
     });
 
     context.subscriptions.push(disposable);
