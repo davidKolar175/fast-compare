@@ -23,3 +23,7 @@ Extension now has an icon!
 ### 1.0.3
 
 Minor fixes.
+
+### 1.0.4
+
+Fixed a bug with some files not being found.

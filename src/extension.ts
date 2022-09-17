@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         vscode.commands.executeCommand(
             "vscode.diff",
-            vscode.Uri.from({ scheme: commandContext.scheme, path: commandContext.path }),
+            vscode.Uri.from(commandContext),
             vscode.window.activeTextEditor.document.uri
         );
     });
