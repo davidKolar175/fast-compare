@@ -1,6 +1,6 @@
 # ⚡ FAST COMPARE ⚡
 
-Enables fast way of comparing two files via Context Menu Action on Text Editor Title.
+Enables fast way of comparing two files via Context Menu Action on Text Editor Title and swapping between compared files.
 
 *************************************
 
@@ -8,22 +8,25 @@ Enables fast way of comparing two files via Context Menu Action on Text Editor T
 
 ## Release Notes
 
-### 1.0.0
+### 1.1.0
+Swap feature added! You can now easily swap the files you are comparing. Command is assignable to a key shortcut.
 
-Initial release of Fast Compare.
+### 1.0.4
 
-### 1.0.1
-
-Extension now supports in-memory files (not saved).
-
-### 1.0.2
-
-Extension now has an icon!
+Fixed a bug with some files not being found.
 
 ### 1.0.3
 
 Minor fixes.
 
-### 1.0.4
+### 1.0.2
 
-Fixed a bug with some files not being found.
+Extension now has an icon!
+
+### 1.0.1
+
+Extension now supports in-memory files (not saved).
+
+### 1.0.0
+
+Initial release of Fast Compare.

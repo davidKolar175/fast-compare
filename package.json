@@ -2,11 +2,11 @@
   "name": "fastcompare",
   "displayName": "Fast Compare",
   "icon": "src/img/icon.png",
-  "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title.",
+  "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title and swapping between compared files.",
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.0.4",
+  "version": "1.1.0",
   "author": {
     "name": "David Kolář"
   },
@@ -18,27 +18,44 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:fastcompare.fastcompare"
+    "onCommand:fastcompare.compareWithActiveFile",
+    "onCommand:fastcompare.swapComparedFiles"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "fastcompare.fastcompare",
+        "command": "fastcompare.compareWithActiveFile",
         "title": "Compare with Active File"
+      },
+      {
+        "command": "fastcompare.swapComparedFiles",
+        "title": "Swap Compared Files",
+        "icon": "$(arrow-swap)"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "fastcompare.fastcompare",
+          "command": "fastcompare.compareWithActiveFile",
           "when": "false"
+        },
+        {
+          "command": "fastcompare.swapComparedFiles",
+          "when": "textCompareEditorActive"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "textCompareEditorActive",
+          "command": "fastcompare.swapComparedFiles",
+          "group": "navigation"
         }
       ],
       "editor/title/context": [
         {
           "when": "true",
-          "command": "fastcompare.fastcompare",
+          "command": "fastcompare.compareWithActiveFile",
           "group": "1_diff"
         }
       ]
