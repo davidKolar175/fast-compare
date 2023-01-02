@@ -8,6 +8,9 @@ Enables fast way of comparing two files via Context Menu Action on Text Editor T
 
 ## Release Notes
 
+### 1.1.1
+Restricted mode compatibility added! Now you can use the extension while in restricted mode.
+
 ### 1.1.0
 Swap feature added! You can now easily swap the files you are comparing. Command is assignable to a key shortcut.
 

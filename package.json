@@ -6,13 +6,18 @@
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "David Kolář"
   },
   "publisher": "DavidKol",
   "engines": {
     "vscode": "^1.70.0"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   },
   "categories": [
     "Other"
@@ -63,6 +68,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "publish-ext": "vsce publish",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
