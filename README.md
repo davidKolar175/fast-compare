@@ -8,6 +8,11 @@ Enables fast way of comparing two files via Context Menu Action on Text Editor T
 
 ## Release Notes
 
+### 1.2.0
+Added ability to Compare with active file in Explorer's folder view.
+
+![Explorer Exhibition](src/img/NewFeature.gif)
+
 ### 1.1.1
 Restricted mode compatibility added! Now you can use the extension while in restricted mode.
 
