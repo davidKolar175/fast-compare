@@ -2,7 +2,7 @@
   "name": "fastcompare",
   "displayName": "Fast Compare",
   "icon": "src/img/icon.png",
-  "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title and swapping between compared files.",
+  "description": "Enables fast way of comparing two files via Context Menu Action on Text Editor Title.",
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
@@ -23,8 +23,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:fastcompare.compareWithActiveFile",
-    "onCommand:fastcompare.swapComparedFiles"
+    "onCommand:fastcompare.compareWithActiveFile"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -32,11 +31,6 @@
       {
         "command": "fastcompare.compareWithActiveFile",
         "title": "Compare with Active File"
-      },
-      {
-        "command": "fastcompare.swapComparedFiles",
-        "title": "Swap Compared Files",
-        "icon": "$(arrow-swap)"
       }
     ],
     "menus": {
@@ -44,10 +38,6 @@
         {
           "command": "fastcompare.compareWithActiveFile",
           "when": "false"
-        },
-        {
-          "command": "fastcompare.swapComparedFiles",
-          "when": "textCompareEditorActive"
         }
       ],
       "explorer/context": [
@@ -55,13 +45,6 @@
           "when": "!explorerResourceIsFolder && isFileSystemResource && (activeEditor == 'workbench.editors.files.textFileEditor' || activeEditor == 'workbench.editors.textResourceEditor')",
           "command": "fastcompare.compareWithActiveFile",
           "group": "1_diff"
-        }
-      ],
-      "editor/title": [
-        {
-          "when": "textCompareEditorActive",
-          "command": "fastcompare.swapComparedFiles",
-          "group": "navigation"
         }
       ],
       "editor/title/context": [
