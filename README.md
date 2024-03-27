@@ -1,12 +1,16 @@
 # ⚡ FAST COMPARE ⚡
 
-Enables fast way of comparing two files via Context Menu Action on Text Editor Title and swapping between compared files.
+Enables fast way of comparing two files via Context Menu Action on Text Editor Title.
 
 *************************************
 
 ![Exhibition](src/img/Animation.gif)
 
 ## Release Notes
+
+### 1.2.1
+Removed ability to swap compared files since this feature was added to VSCode in version 1.86. 
+https://stackoverflow.com/a/77638341
 
 ### 1.2.0
 Added ability to Compare with active file in Explorer's folder view.

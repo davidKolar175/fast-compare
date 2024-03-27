@@ -20,17 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
         );
     });
 
-    const swapFilesDisposable = vscode.commands.registerCommand('fastcompare.swapComparedFiles', () => {
-        const tabInputTextDiff = vscode.window.tabGroups.activeTabGroup.activeTab?.input as vscode.TabInputTextDiff;
-        vscode.commands.executeCommand("workbench.action.closeActiveEditor");
-        vscode.commands.executeCommand(
-            "vscode.diff",
-            tabInputTextDiff.modified,
-            tabInputTextDiff.original
-        );
-    });
-
-    context.subscriptions.push(compareWithActiveFileDisposable, swapFilesDisposable);
+    context.subscriptions.push(compareWithActiveFileDisposable);
 }
 
 export function deactivate() { }
