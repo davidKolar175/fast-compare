@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": {
     "name": "David Kolář"
   },
@@ -23,7 +23,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:fastcompare.compareWithActiveFile"
+    "onCommand:fastcompare.compareWithActiveFile",
+    "onCommand:fastcompare.compareWithTab"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -31,6 +32,10 @@
       {
         "command": "fastcompare.compareWithActiveFile",
         "title": "Compare with Active File"
+      },
+      {
+        "command": "fastcompare.compareWithTab",
+        "title": "Compare with Tab"
       }
     ],
     "menus": {
@@ -54,7 +59,14 @@
           "group": "1_diff"
         }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "fastcompare.compareWithTab",
+        "key": "ctrl+alt+c",
+        "when": "editorTextFocus"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

@@ -8,6 +8,9 @@ Enables fast way of comparing two files via Context Menu Action on Text Editor T
 
 ## Release Notes
 
+### 1.2.2
+Compare tabs like in Notepad++ with ctrl+alt+c
+
 ### 1.2.1
 Removed ability to swap compared files since this feature was added to VSCode in version 1.86. 
 https://stackoverflow.com/a/77638341
