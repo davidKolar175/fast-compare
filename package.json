@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/davidKolar175/fast-compare"
   },
-  "version": "1.2.1",
+  "version": "1.3.0",
   "author": {
     "name": "David Kolář"
   },
@@ -26,6 +26,14 @@
     "onCommand:fastcompare.compareWithActiveFile"
   ],
   "main": "./out/extension.js",
+  "files": [
+    "out/extension.js",
+    "src/img/**"
+  ],
+  "overrides": {
+    "diff": "8.0.3",
+    "serialize-javascript": "7.0.5"
+  },
   "contributes": {
     "commands": [
       {
@@ -58,24 +66,24 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "package:vsix": "npx --yes @vscode/vsce@3.9.2 package",
     "publish-ext": "vsce publish",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint src",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
     "@types/vscode": "^1.70.0",
-    "@types/glob": "^7.2.0",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "16.x",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
-    "eslint": "^8.20.0",
-    "glob": "^8.0.3",
-    "mocha": "^10.0.0",
-    "typescript": "^4.7.4",
-    "@vscode/test-electron": "^2.1.5"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.63.0",
+    "@typescript-eslint/parser": "^8.63.0",
+    "eslint": "^10.7.0",
+    "glob": "^13.0.6",
+    "mocha": "^11.7.6",
+    "typescript": "^6.0.3",
+    "@vscode/test-electron": "^3.0.0"
   }
 }
