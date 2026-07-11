@@ -2,11 +2,30 @@
 
 Enables fast way of comparing two files via Context Menu Action on Text Editor Title.
 
+## Installation from a GitHub release
+
+Each GitHub release includes a versioned `.vsix` file. Download it from the
+release assets and install it with **Extensions: Install from VSIX...** in VS Code,
+or run:
+
+```sh
+code --install-extension fastcompare-<version>.vsix
+```
+
+To create the same package locally, run `npm ci` followed by
+`npm run package:vsix -- --out fastcompare-<version>.vsix`.
+
 *************************************
 
 ![Exhibition](src/img/Animation.gif)
 
 ## Release Notes
+
+### 1.3.0
+
+GitHub releases now include a ready-to-install `.vsix` package, making it
+possible to install Fast Compare directly from the release assets without
+using the Visual Studio Marketplace.
 
 ### 1.2.1
 Removed ability to swap compared files since this feature was added to VSCode in version 1.86. 
