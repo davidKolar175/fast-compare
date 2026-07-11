@@ -18,12 +18,12 @@ jobs:
 
     steps:
       - name: Check out tag
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
@@ -64,7 +64,8 @@ jobs:
         run: npm run compile
 
       - name: Test
-        run: npm test
+        run: xvfb-run -a npm test
+        timeout-minutes: 10
 
       - name: Package extension
         run: npm run package:vsix -- --out "$VSIX_PATH"
